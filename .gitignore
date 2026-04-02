@@ -1,0 +1,27 @@
+#== visual studio and user-specific state ====================================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+#==============================================================================
+
+#== .net build output =========================================================
+bin/
+obj/
+#==============================================================================
+
+#== local codex and dotnet workspace state ===================================
+.codex-build-verify/
+.codex-build-verify-project/
+.dotnet/
+.dotnet_cli/
+.tmp/
+#==============================================================================
+
+#== bundled executables kept out of git objects ===============================
+tools/deno.exe
+tools/yt-dlp.exe
+tools/ffmpeg/ffmpeg.exe
+tools/ffmpeg/ffprobe.exe
+#==============================================================================

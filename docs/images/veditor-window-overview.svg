@@ -23,7 +23,7 @@
   <text x="425" y="158" fill="#e6f2ff" font-family="Consolas, monospace" font-size="32" font-weight="700">Nothing loaded yet.</text>
 
   <rect x="165" y="205" width="865" height="475" rx="26" fill="#020914" stroke="#123256"/>
-  <text x="598" y="453" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="38">Download a file or open one to preview it here.</text>
+  <text x="598" y="453" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="38">Download a file or open</text>
 
   <rect x="1065" y="100" width="315" height="600" rx="16" fill="#101e33" stroke="#1f3b63"/>
   <text x="1088" y="152" fill="#f3f7ff" font-family="Segoe UI, Arial" font-size="42" font-weight="700">Downloader</text>

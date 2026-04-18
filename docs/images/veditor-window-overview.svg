@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">VeditorWindow interface overview</title>
+  <desc id="desc">Diagram showing left navigation rail, center preview surface, right downloader panel, and status bar.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1323"/>
+      <stop offset="100%" stop-color="#040a14"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="760" fill="url(#bg)"/>
+  <rect x="10" y="10" width="1380" height="70" rx="16" fill="#0f1f34" stroke="#1f3b63"/>
+  <text x="28" y="55" fill="#e6f2ff" font-family="Segoe UI, Arial" font-size="42" font-weight="700">VeditorWindow</text>
+  <rect x="20" y="100" width="110" height="600" rx="16" fill="#0c1a2e" stroke="#1f3b63"/>
+  <text x="75" y="160" text-anchor="middle" fill="#37b6ff" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Download</text>
+  <text x="75" y="230" text-anchor="middle" fill="#8ea9ca" font-family="Segoe UI, Arial" font-size="22">Compress</text>
+  <text x="75" y="300" text-anchor="middle" fill="#8ea9ca" font-family="Segoe UI, Arial" font-size="22">Trim</text>
+  <text x="75" y="370" text-anchor="middle" fill="#8ea9ca" font-family="Segoe UI, Arial" font-size="22">Crop</text>
+  <text x="75" y="440" text-anchor="middle" fill="#8ea9ca" font-family="Segoe UI, Arial" font-size="22">Activity</text>
+
+  <rect x="145" y="100" width="905" height="600" rx="16" fill="#0a1628" stroke="#1f3b63"/>
+  <rect x="165" y="120" width="865" height="62" rx="12" fill="#102038"/>
+  <text x="190" y="158" fill="#40c6ff" font-family="Segoe UI, Arial" font-size="28" font-weight="700">DOWNLOAD</text>
+  <text x="425" y="158" fill="#e6f2ff" font-family="Consolas, monospace" font-size="32" font-weight="700">Nothing loaded yet.</text>
+
+  <rect x="165" y="205" width="865" height="475" rx="26" fill="#020914" stroke="#123256"/>
+  <text x="598" y="453" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial" font-size="38">Download a file or open</text>
+
+  <rect x="1065" y="100" width="315" height="600" rx="16" fill="#101e33" stroke="#1f3b63"/>
+  <text x="1088" y="152" fill="#f3f7ff" font-family="Segoe UI, Arial" font-size="42" font-weight="700">Downloader</text>
+  <text x="1088" y="206" fill="#8ea9ca" font-family="Segoe UI, Arial" font-size="26">Source URL</text>
+  <rect x="1088" y="220" width="270" height="38" rx="4" fill="#0c1628" stroke="#4f6787"/>
+  <text x="1092" y="247" fill="#6f8bad" font-family="Segoe UI, Arial" font-size="18">Paste a YouTube or direct video URL</text>
+  <text x="1088" y="315" fill="#8ea9ca" font-family="Segoe UI, Arial" font-size="26">Destination</text>
+  <rect x="1088" y="330" width="270" height="38" rx="4" fill="#0c1628" stroke="#4f6787"/>
+  <rect x="1088" y="560" width="270" height="72" rx="18" fill="#33ace7"/>
+  <text x="1223" y="607" text-anchor="middle" fill="#e8f9ff" font-family="Segoe UI, Arial" font-size="44" font-weight="700">Download</text>
+
+  <rect x="10" y="715" width="1380" height="35" rx="10" fill="#091425" stroke="#1f3b63"/>
+  <text x="28" y="739" fill="#37b6ff" font-family="Segoe UI, Arial" font-size="22">• Idle</text>
+  <text x="1368" y="739" text-anchor="end" fill="#8ea9ca" font-family="Consolas, monospace" font-size="22">No media loaded</text>
+</svg>

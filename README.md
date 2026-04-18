@@ -2,6 +2,22 @@
 
 VeditorWindow is a Windows Forms desktop app for downloading media with `yt-dlp`, converting files with `ffmpeg`, and previewing the active file inside an embedded WebView2 surface. The application keeps the workflow in one window: paste a URL, download into a local folder, inspect the result, and convert it to common audio or video formats.
 
+## Interface At A Glance
+
+The main workspace is organized around a "preview-first shell": navigation on the left, primary media canvas in the center, and context-aware tools on the right. This keeps the current media state visible while download, conversion, and inspection actions stay one click away.
+
+![VeditorWindow dark-themed workspace with downloader panel, preview canvas, and left navigation rail.](./docs/images/veditor-window-overview.svg)
+
+### What You Are Seeing In This Screen
+
+- **Left rail (mode switcher):** quick navigation for `Download`, `Compress`, `Trim`, `Crop`, and `Activity`.
+- **Top command strip:** fast actions to download or open media and select the active source state.
+- **Center preview surface:** immediate visual feedback for opened or freshly downloaded files.
+- **Right task panel (`Downloader`):** guided form for source URL, destination path, and capture mode (video or extract-audio-only).
+- **Bottom status bar:** real-time operation status and currently loaded media summary.
+
+This layout is designed so the user can move through the normal flow without changing windows: **capture media -> preview result -> optionally convert/export**.
+
 ## What The App Does
 
 - Downloads online media into a user-selected output folder.

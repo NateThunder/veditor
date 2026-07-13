@@ -80,9 +80,9 @@ This is the concrete runtime shape of the current application, not a generic tem
      | webPreview.NavigationCompleted       |
      +--------------------------------------+
                         |
-           +------------+------------+
-           |                         |
-           v                         v
+           +------------+----------------------+
+           |                                   |
+           v                                   v
 +----------------------------------+   +----------------------------------+
 | The user starts a download.      |   | The user opens or converts the   |
 | StartDownloadAsync()             |   | current media file.              |
@@ -90,8 +90,8 @@ This is the concrete runtime shape of the current application, not a generic tem
 | CaptureOutputFolderSnapshot()    |   | GetPreferredMediaPath()          |
 | ResolveToolPath()                |   | IsAudioOnlyMedia()               |
 +----------------------------------+   +----------------------------------+
-           |                         |
-           v                         v
+           |                                    |
+           v                                    v
 +----------------------------------+   +----------------------------------+
 | yt-dlp is configured and started.|   | ffmpeg arguments are selected    |
 | BuildStartInfo()                 |   | and the conversion starts.       |
@@ -99,8 +99,8 @@ This is the concrete runtime shape of the current application, not a generic tem
 | ReadLinesAsync()                 |   | GetConversionArguments()         |
 | HandleOutputLine()               |   | BuildVideoConversionArguments()  |
 +----------------------------------+   +----------------------------------+
-           |                         |
-           +------------+------------+
+           |                                   |
+           +------------+----------------------+
                         |
                         v
      +--------------------------------------+

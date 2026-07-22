@@ -17,6 +17,40 @@ obj/
 .dotnet/
 .dotnet_cli/
 .tmp/
+artifacts/
+TestResults/
+__pycache__/
+*.py[cod]
+#==============================================================================
+
+#== local manual-test media ===================================================
+/*.aac
+/*.avi
+/*.bmp
+/*.flac
+/*.flv
+/*.jpe
+/*.jpeg
+/*.jpg
+/*.m4a
+/*.m4v
+/*.mkv
+/*.mov
+/*.mp3
+/*.mp4
+/*.ogg
+/*.png
+/*.tif
+/*.tiff
+/*.wav
+/*.webm
+/*.webp
+/*.wmv
+#==============================================================================
+
+#== local watermark runtime artifacts ========================================
+tools/watermark-ai/*.partial
+tools/watermark-ai/.pytest_cache/
 #==============================================================================
 
 #== bundled executables kept out of git objects ===============================

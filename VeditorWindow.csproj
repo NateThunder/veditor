@@ -2,21 +2,43 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
+    <AssemblyName>Veditor</AssemblyName>
+    <ApplicationIcon>Assets\veditor.ico</ApplicationIcon>
     <TargetFramework>net10.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <DefaultItemExcludes>$(DefaultItemExcludes);.codex-build-verify\**; .codex-build-verify-project\**</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.codex-build-verify\**; .codex-build-verify-project\**;VeditorWindow.Tests\**</DefaultItemExcludes>
+    <WebView2PackageVersion>1.0.3856.49</WebView2PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <None Update="tools\**\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="tools\watermark-ai\tests\**;tools\**\__pycache__\**;tools\**\*.pyc">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3856.49" />
+    <InternalsVisibleTo Include="VeditorWindow.Tests" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="$(WebView2PackageVersion)" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <!--== reference cleanup ===================================================-->
+  <Target Name="RemoveUnusedWebView2WpfReference" BeforeTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <_UnusedWebView2WpfReference Include="@(Reference)" Condition="'%(Reference.FileName)' == 'Microsoft.Web.WebView2.Wpf'" />
+      <Reference Remove="@(_UnusedWebView2WpfReference)" />
+    </ItemGroup>
+  </Target>
+  <!--=======================================================================-->
 
 </Project>

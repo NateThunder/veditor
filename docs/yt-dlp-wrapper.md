@@ -41,13 +41,15 @@ dotnet build
 
 Start the WinForms app, paste a video URL, choose an output folder, then click `Download`.
 
-If `Extract audio (mp3)` is checked, the wrapper adds:
+The `MP3` and `WAV` audio-only checkboxes both start unchecked, so the default action downloads video. Selecting either checkbox adds that audio format:
 
 ```text
 -x --audio-format mp3
+# or
+-x --audio-format wav
 ```
 
-If audio-only is not checked, the wrapper prefers a best-video plus best-audio download and merges to mp4 when possible.
+Selecting both downloads WAV once and uses FFmpeg to create the matching MP3 without downloading the source twice. If neither audio-only option is checked, the wrapper prefers a best-video plus best-audio download and merges to MP4 when possible.
 
 ## 5. How the wrapper works
 

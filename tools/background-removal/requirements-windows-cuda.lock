@@ -1,0 +1,2 @@
+# Veditor Background Removal: CPython 3.12 x64, rembg NVIDIA CUDA backend.
+rembg[gpu]==2.0.77

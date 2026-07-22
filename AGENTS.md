@@ -159,6 +159,72 @@ When updating `README.md` or other Markdown documentation:
 
 ---
 
+## UI Design Specification
+
+When working on UI in this repository, agents must behave as expert psychological UI designers, not only as implementers of controls.
+
+The goal is to make the interface feel clear, calm, readable, and trustworthy under real usage, especially in dense desktop layouts.
+
+### Psychological UI design rules
+
+- design for low cognitive load first
+- create clear visual hierarchy so the user can tell what is primary, secondary, and informational at a glance
+- group related controls so the screen feels intentional rather than crowded
+- use spacing, alignment, contrast, and sizing to reduce confusion and hesitation
+- prefer readable, stable layouts over visually cramped layouts that fit more controls at the cost of clarity
+- make important actions look obviously actionable and supporting information look clearly supportive
+
+### Box and control sizing rules
+
+- boxes, panels, buttons, labels, tabs, group areas, and other text containers must be sized for their real content
+- text must not be cut off, half-hidden, clipped, or visually squeezed inside boxes
+- do not rely on a box size that only works for short placeholder text
+- size controls using the longest realistic text they may need to display
+- include enough internal padding so text does not touch edges or look cramped
+- prefer layouts that expand, wrap, or reflow content instead of truncating important words
+- avoid fixed widths or heights when content length, font size, DPI scaling, or localization can change
+- when a fixed-size area is necessary, validate that it still fits the intended text comfortably
+- status text, headings, button labels, combo-box items, and dialog actions must remain readable at common Windows scaling settings
+
+### Text-fitting requirements
+
+- check for clipping at minimum on normal scale and larger desktop scaling where text commonly grows
+- if text can vary, use measurement-aware sizing, wrapping, multiline layout, or larger containers
+- do not accept a layout where words are cut off inside the middle of a button, label, panel, or summary box
+- ellipsis may be used only for clearly secondary overflow cases, not as the default solution for primary UI text
+- if the UI currently clips text, fixing the sizing and layout takes priority over cosmetic refinements
+
+### Text visibility and contrast requirements
+
+- all visible text must remain clearly readable against its background
+- do not place dark text on similarly dark surfaces or light text on similarly light surfaces
+- choose foreground and background colors with strong practical contrast, not barely acceptable contrast
+- headings, labels, button text, status text, and disabled-state text must still be readable in the actual UI theme
+- when using tinted panels, gradients, overlays, accent fills, or custom cards, verify the text still stands out clearly
+- do not rely on color alone when contrast, hierarchy, weight, spacing, or borders are needed to preserve readability
+- if a background treatment makes text harder to read, adjust the background, foreground, or container styling until the text is clearly visible
+
+### Review standard for UI changes
+
+When making or reviewing UI changes, agents must explicitly check:
+- whether any visible text is clipped
+- whether text is clearly readable against its background
+- whether button and box sizes match their content
+- whether spacing and grouping reduce visual stress
+- whether the screen remains readable without forcing the user to guess hidden text
+- whether the layout still works when labels become slightly longer than expected
+
+### Screenshot reconstruction and photo generator fallback
+
+- when implementing UI from a screenshot, first reproduce the design with the real controls, layout, styling, and assets available in the current stack
+- if a visual element from the screenshot does not exist in the current stack and cannot be recreated faithfully with reasonable effort, the agent may use a photo generator or image generator to create a supporting asset
+- generated assets must be limited to non-interactive visual content such as photos, illustrations, textures, or decorative background elements
+- do not replace real controls, readable interface text, or semantically important UI elements with generated bitmap content
+- any generated asset must still follow the repository rules for text visibility, contrast, spacing, sizing, and low-cognitive-load layout
+- if a generated asset is used, place it so it supports the UI rather than disguising missing interaction or hiding layout problems
+
+---
+
 ## Preferred Section Names
 
 When relevant, prefer short stable labels such as:
@@ -283,6 +349,10 @@ When making any code change in this repository:
 - do not strip comments during cleanup
 - prefer explicit, readable structure over compact but unclear code
 - follow the schema and section naming conventions in this file
+- apply the UI design specification when changing forms, controls, spacing, box sizing, or text layout
+- use the screenshot reconstruction fallback rule when matching a screenshot that includes elements not available in the current stack
+- ensure visible UI text fits its container cleanly and is not clipped inside boxes or controls
+- ensure visible UI text has clear contrast against its background in the actual rendered interface
 - keep Markdown file, section, and line links accurate when documentation references concrete code
 - write ASCII schema diagrams so the plain-English meaning comes first and the technical terms stay visible underneath
 - keep the `README.md` schema section updated when the current system architecture, major control flow, schema elements, or their code mappings change

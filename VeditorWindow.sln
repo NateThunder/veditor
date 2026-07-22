@@ -4,6 +4,8 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeditorWindow", "VeditorWindow.csproj", "{726E5D62-5031-A441-E0C4-C04A357A2C95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeditorWindow.Tests", "VeditorWindow.Tests\VeditorWindow.Tests.csproj", "{8A45917D-341E-4E83-A361-9AA815B810F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +16,10 @@ Global
 		{726E5D62-5031-A441-E0C4-C04A357A2C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{726E5D62-5031-A441-E0C4-C04A357A2C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{726E5D62-5031-A441-E0C4-C04A357A2C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A45917D-341E-4E83-A361-9AA815B810F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A45917D-341E-4E83-A361-9AA815B810F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A45917D-341E-4E83-A361-9AA815B810F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A45917D-341E-4E83-A361-9AA815B810F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
